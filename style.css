@@ -1,0 +1,534 @@
+@layer reset, base, layout, components, utilities, states, overrides, print;
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@layer reset{
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+}
+
+@layer base{
+    :root{
+        --text: #15005a;
+        --background: #e8abbe;
+        --primary: #d74b80;
+        --secondary: #ffffff;
+        --accent: #9eaef0;
+        --body-back: #943258;
+
+        --title-font: "Bodoni Moda SC", serif;
+        --rest-font: serif;
+        --main-width: 100%;
+        --img-width: 50%;
+        --common-space: 2rem;
+        --radius-card: 30px;
+        --focus-border: 1px dashed var(--text);
+
+    }
+} 
+
+
+@layer layout{
+
+    body{
+        background-color: var(--body-back);
+        box-sizing: border-box;
+    }
+
+    header, main, footer{
+        width: var(--main-width);
+        max-width: 70rem;
+        margin: auto;
+    }
+
+    img{
+        width: var(--img-width);
+        display: block;
+        margin: auto;
+        border-radius: 30px;
+        box-shadow: 4px 4px 4px var(--primary);
+    }
+
+    main{
+        container-type: inline-size;
+    }
+
+}
+
+@layer components{
+    header{
+        background-color: var(--background);
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
+
+    h1, h2, h3{
+        font-family: var(--title-font);
+    }
+
+    p, a, button{
+        font-family: var(--rest-font);
+    }
+
+    .head-banner{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        width: 100%;
+        background-color: var(--primary);
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .head-banner a{
+        display: block;
+        color: var(--secondary);
+        text-decoration: none;
+        text-shadow: 1px 1px 3px var(--text);
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    nav{
+        display: block;
+        align-self: center;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+        font-size: 1.25rem;
+        justify-content: center;
+    }
+
+    nav a{
+        height: 100%;
+        border-left: solid 1px var(--background);
+        border-right: solid 1px var(--background);
+        padding: 0rem 0.75rem;
+    }
+
+    .intro-title{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem auto;
+        text-align: center;
+        font-size: 3rem;
+        color: var(--text);
+    }
+
+    main{
+        background-color: var(--primary);
+        padding: 3rem;
+        box-sizing: border-box;
+    }
+
+    section{
+        width: 95%;
+        background-color: var(--background);
+        margin: var(--common-space) auto;
+        border-radius: 50px;
+    }
+
+    h2{
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+        padding: var(--common-space);
+        background-color: var(--accent);
+        width: 50%;
+        margin: auto;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        box-shadow: 4px 4px 10px var(--primary);
+
+    }
+
+    .hp-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        align-items: center;
+        gap: var(--common-space);
+        width: 100%;
+        max-width: 60rem;
+        margin-inline: auto;
+      }
+    
+      .hp-grid .diff-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+
+    .diff-img,
+    .card img{
+        width: 100%;
+        box-shadow: 0px 0px 0px;
+    }
+    
+      .hp-grid p {
+        line-height: 1.5rem;
+        padding: 0.5rem 2rem 2rem;
+      }
+
+    button{
+        display: block;
+        margin: var(--common-space) auto;
+        text-align: center;
+        padding: 0.75rem;
+        border-radius: 15px;
+        border: 0px;
+        background-color: var(--primary);
+        font-size: 1.05rem;
+    }
+
+    /*Below we have the navigation cards 
+    being displayed in grid form using 
+    auto-fit and minmax()*/
+
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(10rem,100%),1fr));
+        gap: var(--radius-card);
+        margin: 2rem;
+    }
+
+    .card{
+        background-color: var(--accent);
+        border-radius: var(--radius-card);
+        margin-bottom: 2rem;
+        transition: 0.25s;
+        padding-bottom: 1rem;
+    }
+
+
+    .card-grid a,
+    .hp-grid a{
+        text-decoration: none;
+        color: var(--text);
+    }
+
+    .card h3{
+        font-size: 1.15rem;
+        font-weight: bold;
+    }
+
+    .card h3,
+    .card p{
+        padding: 1rem;
+    }
+
+    /*Below we have the bottom footer links 
+    being displayed in grid form using auto-fit 
+    and minmax()*/    
+
+    .contact{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(10rem,100%),1fr));
+        text-align: center;
+    }
+
+    .contact a{
+        display: block;
+        background-color: var(--background);
+        height: 100%;
+        font-size: 1.25rem;
+        color: var(--body-back);
+        padding: 0.5rem;
+        text-decoration: none;
+        border: solid 0.5px var(--primary)
+    }
+
+
+}
+
+@layer utilities{
+    .center{
+        text-align: center;
+    }
+
+    .slightly-larger-font{
+        font-size: 1.15rem;
+    }
+
+    .all-caps{
+        text-transform:uppercase;
+    }
+
+    .indented{
+        text-indent: 2rem;
+    }
+}
+
+@layer states{
+    .card:hover{
+        padding: var(--common-space);
+        transition: 0.25s;
+    }
+
+    .card:focus-visible{
+        background-color: var(--secondary);
+        border: 1px dashed var(--text);
+    }
+
+    .head-banner a:hover{
+        background-color: var(--background);
+        color: var(--text);
+        text-shadow: 0px 0px 0px;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-card);
+        transition: 0.5s;
+    }
+
+    .head-banner a:focus-visible{
+        background-color: var(--secondary);
+        border: var(--focus-border);
+    }
+
+    button:hover{
+        background-color: var(--secondary);
+        padding: 1.25rem;
+        transition: 0.25s;
+    }
+
+    nav [aria-current="page"]{
+        background-color: var(--accent);
+        color: var(--secondary);
+        box-shadow: 0px 0px;
+      } 
+        
+
+    .contact a:hover{
+        background-color: var(--accent);
+        color: var(--secondary);
+        transition: 0.25s;
+    }
+
+
+}
+
+@layer overrides{
+
+    /*Around 900px is where I've determined 
+    that most of the aspects of my site stop 
+    being easy to read and need to be reorganized.  
+    This was tested using inspection and devtools*/
+
+    @media screen and (width < 900px){
+        
+
+        section{
+            width: 100%;
+        }
+
+        h2{
+            font-size: 1.5rem;
+        }
+
+        .card-grid{
+            grid-template-columns: 1fr;
+        }
+
+        .card-grid h3,
+        .card-grid p{
+            padding: 1rem;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .head-banner{
+            grid-template-columns: 1fr;
+        }
+
+        .intro-title{
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+
+        .hp-grid {
+            grid-template-columns: 1fr;
+            margin-top: 3rem;
+          }
+  
+          .hp-grid img,
+          .diff-img{
+              width: 50%;
+              margin-inline: auto;
+              margin-top: 1rem;
+          }
+    }
+
+    /* Fallback:
+   Without container-query support, .hp-grid retains its
+   default two-column layout.  I've added it to the media
+   query so that it can change based on viewport size
+   instead with the rest of the site */
+
+    @container (width < 57rem) {
+        .hp-grid {
+          grid-template-columns: 1fr;
+          margin-top: 3rem;
+        }
+
+        .hp-grid img,
+        .diff-img{
+            width: 50%;
+            margin-inline: auto;
+            margin-top: 1rem;
+        }
+      }
+
+    /*These media and container queries work 
+    when the containers and viewport width shift, 
+    they also shift when using zoom in a browser.
+    Using the container query is nice because 
+    there's a lot of things that I didn't need 
+    to change between the larger vs medium widths 
+    of the site, so the medium is a mixture of the 
+    wide and the narrow viewports.
+    
+    When testing the different viewports and zoom of
+    the browser, the results follow the queries I put
+    in place as I want them to be*/
+
+    .up-img{
+        margin: 2rem auto;
+    }
+
+    .card p{
+        font-size: 0.95rem;
+    }
+
+    /* I have adjusted the contrast of the page 
+    for any users that have a preference for their 
+    site to have more contrast, I figured this was 
+    useful to my page as the color scheme uses a lot 
+    of similar colors so that it has a very soft 
+    aesthetic look*/
+
+    @media (prefers-contrast: more){
+        :root{
+            --text: #000000;
+            --background: #ffd6e3;
+            --primary: #a92062;
+            --secondary: #ffffff;
+            --accent: #b5c4ff;
+        }
+
+        .hp-grid button{
+            color: var(--secondary);
+        }
+    }
+}
+
+@layer print {
+    @media print {
+        body {
+            background: white;
+            color: black;
+        }
+
+        header, main, footer {
+            width: 100%;
+            padding: 0;
+        }
+
+        nav, button {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            break-inside: avoid;
+        }
+
+        a {
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}
+
+/*
+
+Explanation:
+
+I've put in all of my desired responsive changes, 
+such as nav, the title & img, the section cards, 
+and the cards in the third section.
+I cannot see any reason for me to utilize s
+ub-grid with any of my grids as they are all 
+meant to be very simply, perhaps it can be 
+better utilized for one of the gallery pages 
+but not the homepage.
+
+
+AI disclosure
+
+I used AI to cross reference my code and the 
+requirements for the assignment */
