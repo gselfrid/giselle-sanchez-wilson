@@ -277,11 +277,7 @@ table {
     .card h3,
     .card p{
         padding: 1rem;
-    }
-
-    /*Below we have the bottom footer links 
-    being displayed in grid form using auto-fit 
-    and minmax()*/    
+    }   
 
     .contact{
         display: grid;
@@ -298,6 +294,26 @@ table {
         padding: 0.5rem;
         text-decoration: none;
         border: solid 0.5px var(--primary)
+    }
+
+    .pp-card-1,
+    .pp-card-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--accent);
+        margin: 3rem;
+        padding: 0;
+        height: 15rem;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pp-card-1 img{
+        transform: rotate(5deg);
+    }
+    .pp-card-2 img{
+        transform: rotate(-5deg);
     }
 
 
