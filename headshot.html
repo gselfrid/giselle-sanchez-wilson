@@ -9,25 +9,27 @@
 <body>
     <header>
         <div class="head-banner">
-            <h1><a href="index.html">Giselle Sanchez&nbspWilson</a></h1>
+            <div class="h1-img">
+                <h1><a href="index.html">Giselle Sanchez&nbspWilson</a></h1>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#">On Stage</a></li>
-                    <li><a aria-current="page" href="#">Headshot & Resume</a></li>
-                    <li><a href="#">Reels</a></li>
+                    <li><a href="pastproductions.html">On Stage</a></li>
+                    <li><a aria-current="page" href="headshot.html">Headshot & Resume</a></li>
+                    <li><a href="reels.html">Reels</a></li>
                 </ul>
             </nav>
         </div>
         <div class="intro-title">
             <h2>Headshot & Resume</h2>
-            <img src="giselle-1.JPG" alt="giselle-1">
+            <img src="headshots/main headshots for download-3.jpg" alt="giselle-1" aria-hidden="true">
         </div>
     </header>
     <main>
         <section id="downloading">
             <h2>Click photo to Download</h2>
             <div class="downloading">
-                <a href="#" download>Download Giselle's Resume</a>
+                <a href="Giselle-Sanchez-Wilson-Resume.pdf" download><button class="slightly-larger-font">Download Giselle's Resume</button></a>
                 <div class="headshots">
                     <a href="headshots/main headshots for download-1.jpg" download><img src="headshots/main headshots for download-1.jpg" alt="giselle-headshot"></a>
                     <a href="headshots/main headshots for download-2.jpg" download><img src="headshots/main headshots for download-2.jpg" alt="giselle-headshot"></a>
@@ -37,10 +39,53 @@
         </section>
         <section id="gallery">
             <h2>Headshot Gallery</h2>
-            <div class="gallgrid-sp">
-                <a href="#" download><img src="#" alt="giselle-headshot"></a>
-                <a href="#" download><img src="#" alt="giselle-headshot"></a>
-                <a href="#" download><img src="#" alt="giselle-headshot"></a>
+            <div class="hp-grid">
+                <a href="headshotgall.html"><button>Click here to head to the headshot gallery!</button></a>
+                <img src="card-img-srcset/headshot-gallery-thumbnail.png" alt="thumbnail for headshot gallery" class="up-img">
+            </div>
+        </section>
+        <section>
+            <h2 class="all-caps">More from Giselle</h2>
+            <div class="card-grid">
+                <a href="index.html#about-bio">
+                    <div class="card">
+                        <img
+                            src="card-img-srcset/giselle-about800.png"
+                            srcset="card-img-srcset/giselle-about400.png 400w, card-img-srcset/giselle-about800.png 800w, card-img-srcset/giselle-about1000.png 1000w"
+                            sizes="(min-width: 60rem) 50vw, 100vw"
+                            width="800px"
+                            alt="giselle about thumbnail sneak peak for bio section"
+                        >
+                        <h3>About Giselle</h3>
+                        <p>Head here to read a little more about Giselle and get to her know her more in depth.</p>
+                    </div>
+                </a>
+                <a href="pastproductions.html">
+                    <div class="card">
+                        <img
+                            src="card-img-srcset/giselle-onstage800.png"
+                            srcset="card-img-srcset/giselle-onstage400.png 400w, card-img-srcset/giselle-onstage800.png 800w, card-img-srcset/giselle-onstage1000.png 1000w"
+                            sizes="(min-width: 60rem) 50vw, 100vw"
+                            width="800px"
+                            alt="giselle past productions thumbnail sneak peak for on stage page"
+                        >
+                        <h3>On Stage</h3>
+                        <p>Head here to view images and videos from Giselle's past works!</p>
+                    </div>
+                </a>
+                <a href="reels.html">
+                    <div class="card">
+                        <img
+                            src="card-img-srcset/giselle-dance800.png"
+                            srcset="card-img-srcset/giselle-dance400.png 400w, card-img-srcset/giselle-dance800.png 800w, card-img-srcset/giselle-dance1000.png 1000w"
+                            sizes="(min-width: 60rem) 50vw, 100vw"
+                            width="800px"
+                            alt="giselle dance reel thumbnail sneak peak for reel page"
+                        >
+                        <h3>Reels</h3>
+                        <p>Head here to see Giselle's showcase of singing, dancing, and acting reels.</p>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
