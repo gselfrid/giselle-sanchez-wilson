@@ -68,7 +68,7 @@ table {
         --background: #e8abbe;
         --primary: #d74b80;
         --secondary: #ffffff;
-        --accent: #9eaef0;
+        --accent: #fdebff;
         --body-back: #943258;
 
         --title-font: "Bodoni Moda SC", serif;
@@ -112,9 +112,8 @@ table {
 
 @layer components{
     header{
-        background-color: var(--background);
+        background-color: var(--primary);
         margin-bottom: 0;
-        padding-bottom: 1rem;
     }
 
     h1, h2, h3{
@@ -166,15 +165,48 @@ table {
         padding: 0rem 0.75rem;
     }
 
-    .intro-title{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-content: center;
-        margin: 2rem auto;
-        text-align: center;
+    .intro-title-hp,
+    .intro-title-head,
+    .intro-title-reels,
+    .intro-title-past{
+        padding: 5rem 0;
+        text-align: left;
         font-size: 3rem;
         color: var(--text);
+    }
+
+    header h2{
+        display: block;
+        margin: 5rem;
+        width: 30%;
+    }
+
+    .intro-title-hp{
+        background-image: url("backgrounds/giselle-background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .intro-title-head{
+        background-image: url("backgrounds/headshots-background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .intro-title-reels{
+        background-image: url("past production img/The Prom/giselle-alyssa-onstage.jpeg");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: 120%;
+    }
+
+    .intro-title-past{
+        background-image: url("backgrounds/onstage-background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 
     main{
@@ -507,9 +539,18 @@ table {
             grid-template-columns: 1fr;
         }
 
-        .intro-title{
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+        header h2{
+            box-sizing: border-box;
+            margin: auto;
+            width: 100%;
+        }
+
+        .intro-title-hp,
+        .intro-title-head,
+        .intro-title-reels,
+        .intro-title-past{
+            padding: 5rem;
+            margin: 0;
         }
 
 
@@ -554,6 +595,25 @@ table {
         margin: 1rem auto;
     }
 
+    }
+
+    @media screen and (width < 600px){
+
+        header h2{
+            width: 100%;
+        }
+
+        .intro-title-hp,
+        .intro-title-head,
+        .intro-title-reels,
+        .intro-title-past{
+            background-size: 150%;
+            background-position: center;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-top: 20rem;
+            padding-bottom: 1rem;
+        }
     }
 
     /* Fallback:
