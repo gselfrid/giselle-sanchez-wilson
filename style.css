@@ -281,6 +281,40 @@ table {
         font-size: 1.05rem;
     }
 
+    #contact-form{
+        padding-bottom: 2rem;
+    }
+
+    #contact-form p{
+        width: 70%;
+        margin: 2rem auto;
+    }
+
+    form{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 1rem auto;
+        font-size: 1.25rem;
+    }
+
+    label{
+        margin: 0.5rem;
+    }
+    
+    input, textarea{
+        margin-bottom: 1.5em;
+        padding: 0.5rem;
+        border: 1px solid var(--background);
+    }
+
+    input:focus,
+    textarea:focus{
+        border: 5px solid var(--primary);
+        outline: none;
+    }
+
     /*Below we have the navigation cards 
     being displayed in grid form using 
     auto-fit and minmax()*/

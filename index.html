@@ -46,6 +46,25 @@
                 </div>
             </div>
         </section>
+        <section id="contact-form">
+            <h2 class="all-caps">Contact Giselle</h2>
+            <p class="slightly-larger-font">Want to reach out to Giselle?  Fill out this form with your information and inquiry!</p>
+           <form action="https://serverform.com/api/v1/submit" method="POST" id="contact-form">
+                <label for="name" class="all-caps">First & Last Name</label>
+                <input type="text" id = "name" name="name" required>
+
+                <label for="email" class="all-caps">Email</label>
+                <input type="email" id= "email" name="email" required>
+
+                <label for="company" class="all-caps">Company/Label</label>
+                <input type="text" id="company" name="company" required>
+
+                <label for="message" class="all-caps">Inquiry</label>
+                <textarea id="message" name="message"required></textarea>
+
+                <button type="submit">Submit</button>
+              </form>
+        </section>
         <section>
             <h2 class="all-caps">More from Giselle</h2>
             <div class="card-grid">
