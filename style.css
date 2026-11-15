@@ -120,7 +120,7 @@ table {
         font-family: var(--title-font);
     }
 
-    p, a, button{
+    p, a, .button, button{
         font-family: var(--rest-font);
     }
 
@@ -270,7 +270,7 @@ table {
         padding: 0.5rem 2rem 2rem;
       }
 
-    button{
+    .button, button{
         display: block;
         margin: var(--common-space) auto;
         text-align: center;
@@ -281,11 +281,11 @@ table {
         font-size: 1.05rem;
     }
 
-    #contact-form{
+    #contact-form-sect{
         padding-bottom: 2rem;
     }
 
-    #contact-form p{
+    #contact-form-sect p{
         width: 70%;
         margin: 2rem auto;
     }
@@ -314,10 +314,6 @@ table {
         border: 5px solid var(--primary);
         outline: none;
     }
-
-    /*Below we have the navigation cards 
-    being displayed in grid form using 
-    auto-fit and minmax()*/
 
     .card-grid{
         display: grid;
@@ -496,9 +492,10 @@ table {
         transition: 0.25s;
     }
 
-    .card:focus-visible{
+    .card-grid a:focus{
         background-color: var(--secondary);
-        border: 1px dashed var(--text);
+        border: 3px dashed var(--text);
+        outline: none;
     }
 
     .head-banner a:hover{
@@ -511,15 +508,24 @@ table {
         transition: 0.5s;
     }
 
-    .head-banner a:focus-visible{
-        background-color: var(--secondary);
+    .head-banner a:focus{
+        background-color: var(--background);
         border: var(--focus-border);
+        outline: none;
     }
 
+    .button:hover,
     button:hover{
         background-color: var(--secondary);
         padding: 1.25rem;
         transition: 0.25s;
+    }
+
+    .button:focus,
+    button:focus{
+        background-color: var(--accent);
+        border: 2px dashed var(--body-back);
+        outline: none;
     }
 
     nav [aria-current="page"]{
@@ -539,11 +545,6 @@ table {
 }
 
 @layer overrides{
-
-    /*Around 900px is where I've determined 
-    that most of the aspects of my site stop 
-    being easy to read and need to be reorganized.  
-    This was tested using inspection and devtools*/
 
     @media screen and (width < 900px){
         
@@ -650,12 +651,6 @@ table {
         }
     }
 
-    /* Fallback:
-   Without container-query support, .hp-grid retains its
-   default two-column layout.  I've added it to the media
-   query so that it can change based on viewport size
-   instead with the rest of the site */
-
     @container (width < 57rem) {
         .hp-grid {
           grid-template-columns: 1fr;
@@ -670,18 +665,7 @@ table {
         }
       }
 
-    /*These media and container queries work 
-    when the containers and viewport width shift, 
-    they also shift when using zoom in a browser.
-    Using the container query is nice because 
-    there's a lot of things that I didn't need 
-    to change between the larger vs medium widths 
-    of the site, so the medium is a mixture of the 
-    wide and the narrow viewports.
-    
-    When testing the different viewports and zoom of
-    the browser, the results follow the queries I put
-    in place as I want them to be*/
+
 
     .up-img{
         margin: 2rem auto;
@@ -691,12 +675,6 @@ table {
         font-size: 0.95rem;
     }
 
-    /* I have adjusted the contrast of the page 
-    for any users that have a preference for their 
-    site to have more contrast, I figured this was 
-    useful to my page as the color scheme uses a lot 
-    of similar colors so that it has a very soft 
-    aesthetic look*/
 
     @media (prefers-contrast: more){
         :root{
@@ -707,7 +685,7 @@ table {
             --accent: #b5c4ff;
         }
 
-        .hp-grid button{
+        .hp-grid .button, hp-grid button{
             color: var(--secondary);
         }
     }
@@ -725,7 +703,7 @@ table {
             padding: 0;
         }
 
-        nav, button {
+        nav, .button, button {
             display: none;
         }
 
@@ -740,22 +718,3 @@ table {
         }
     }
 }
-
-/*
-
-Explanation:
-
-I've put in all of my desired responsive changes, 
-such as nav, the title & img, the section cards, 
-and the cards in the third section.
-I cannot see any reason for me to utilize s
-ub-grid with any of my grids as they are all 
-meant to be very simply, perhaps it can be 
-better utilized for one of the gallery pages 
-but not the homepage.
-
-
-AI disclosure
-
-I used AI to cross reference my code and the 
-requirements for the assignment */

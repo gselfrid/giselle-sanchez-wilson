@@ -29,7 +29,7 @@
             <div class="hp-grid">
                 <div>
                     <p class="center slightly-larger-font">See Giselle as Alyssa Greene in The Prom at Arizona Broadway Theatre!</p>
-                    <a href="#"><button>Get Tickets Here!</button></a>
+                    <a href="#" class="button">Get Tickets Here!</a>
                 </div>
                 <img src="prom.jpeg" alt="prom-advert" class="up-img">
             </div>
@@ -46,20 +46,20 @@
                 </div>
             </div>
         </section>
-        <section id="contact-form">
+        <section id="contact-form-sect">
             <h2 class="all-caps">Contact Giselle</h2>
-            <p class="slightly-larger-font">Want to reach out to Giselle?  Fill out this form with your information and inquiry!</p>
+            <p class="slightly-larger-font">Want to reach out to Giselle?  Fill out this form with your information and inquiry!  Required fields marked with *</p>
            <form action="https://serverform.com/api/v1/submit" method="POST" id="contact-form">
-                <label for="name" class="all-caps">First & Last Name</label>
+                <label for="name" class="all-caps">First & Last Name*</label>
                 <input type="text" id = "name" name="name" required>
 
-                <label for="email" class="all-caps">Email</label>
+                <label for="email" class="all-caps">Email*</label>
                 <input type="email" id= "email" name="email" required>
 
-                <label for="company" class="all-caps">Company/Label</label>
+                <label for="company" class="all-caps">Company/Label*</label>
                 <input type="text" id="company" name="company" required>
 
-                <label for="message" class="all-caps">Inquiry</label>
+                <label for="message" class="all-caps">Inquiry*</label>
                 <textarea id="message" name="message"required></textarea>
 
                 <button type="submit">Submit</button>
@@ -68,8 +68,7 @@
         <section>
             <h2 class="all-caps">More from Giselle</h2>
             <div class="card-grid">
-                <a href="headshot.html">
-                    <div class="card">
+                <a href="headshot.html" class="card">
                         <img
                             src="card-img-srcset/giselle-headshot800.png"
                             srcset="card-img-srcset/giselle-headshot400.png 400w, card-img-srcset/giselle-headshot800.png 800w, card-img-srcset/giselle-headshot1000.png 1000w"
@@ -79,10 +78,8 @@
                         >
                         <h3>Headshots & Resume</h3>
                         <p>Head here to download Giselle's resume and view her headshots!</p>
-                    </div>
                 </a>
-                <a href="pastproductions.html">
-                    <div class="card">
+                <a href="pastproductions.html" class="card">
                         <img
                             src="card-img-srcset/giselle-onstage800.png"
                             srcset="card-img-srcset/giselle-onstage400.png 400w, card-img-srcset/giselle-onstage800.png 800w, card-img-srcset/giselle-onstage1000.png 1000w"
@@ -92,10 +89,8 @@
                         >
                         <h3>On Stage</h3>
                         <p>Head here to view images and videos from Giselle's past works!</p>
-                    </div>
                 </a>
-                <a href="reels.html">
-                    <div class="card">
+                <a href="reels.html" class="card">
                         <img
                             src="card-img-srcset/giselle-dance800.png"
                             srcset="card-img-srcset/giselle-dance400.png 400w, card-img-srcset/giselle-dance800.png 800w, card-img-srcset/giselle-dance1000.png 1000w"
@@ -105,7 +100,6 @@
                         >
                         <h3>Reels</h3>
                         <p>Head here to see Giselle's showcase of singing, dancing, and acting reels.</p>
-                    </div>
                 </a>
             </div>
         </section>
